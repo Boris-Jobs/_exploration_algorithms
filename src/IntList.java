@@ -10,4 +10,11 @@ public class IntList {
         first = f;
         rest = r;
     }
+
+    public static void main(String[] args){
+        IntList L = new IntList(5, null);
+        L.rest = new IntList(10, null);
+    }
+
+    
 }

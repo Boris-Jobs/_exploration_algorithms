@@ -33,13 +33,13 @@ public class SLList {
     public SLList(int x) {
         first = new IntNode(x, null);
         size = 1;
-    }
+    }  // 这是一个constructor
 
     // Improvement #6a: The Empty List
     public SLList() {
         first = null;
         size = 0;
-    }
+    }  // 这也是一个constructor
 
     /** Adds an item to the front of the list. */
     public void addFirst(int x) {
@@ -54,13 +54,20 @@ public class SLList {
     }
 
     public void addLast(int x) {
+        size += 1;
+
+        if (first == null) {
+            first = new IntNode(x, null);
+            return;
+        }  // This is for situations where first is null
+
         IntNode p = first;
         /* Advance p to the end of the list. */
         while (p.next != null) {
             p = p.next;
         }
         p.next = new IntNode(x, null);
-        size += 1;
+
     }
 
     /** Returns the size of the list starting at IntNode p. */
@@ -104,5 +111,7 @@ public class SLList {
         System.out.println(testL.first.next.next.item);
         System.out.println(L2.size());
         System.out.println(L2.size);  // 同一个class可以访问private变量，没毛病
+        SLList nullist = new SLList();
+        nullist.addLast(3);  // Cannot read field "next" because "p" is null
     }
 }

@@ -11,7 +11,7 @@
 
 public class _03_Basics {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println("\nHello world!");
 
         // Box and Pointer Notation
         Walrus a = new Walrus(1000, 8.3);
@@ -20,31 +20,31 @@ public class _03_Basics {
         Walrus b;
         b = a;
         b.weight = 5;
-        System.out.println(a);
+        System.out.println("the original a is: " + a);
         System.out.println(b);
-        System.out.println("a and b are reference objects, b copied a's address, so they changed together.");
+        System.out.println("a and b are reference objects, b copied a's address, so they changed together.\n");
         int x = 5;
         int y;
         y = x;
         x = 2;
-        System.out.println("x is: " + x);
-        System.out.println("y is: " + y);
-        System.out.println("x and y are primitive types, y copied x's address, so they changed together. In Java, there are 8 primitive types: byte, short, int, long, float, double, boolean, and char.");
+        System.out.println("after passing, x is: " + x);
+        System.out.println("after passing, y is: " + y);
+        System.out.println("x and y are primitive types, y copied x's address, so they changed together. In Java, there are 8 primitive types: byte, short, int, long, float, double, boolean, and char.\n");
 
         // Parameter Passing
-        doStuff(a, x);
-        System.out.println(a);
-        System.out.println(x);
+        doStuff(a, x);  // The Golden Rule of Equals (GRoE)
+        System.out.println("the variable a has already changed: " + a);
+        System.out.println("but the variable x is still: " + x);
         x = doStuff2(a, x);
-        System.out.println(a);
-        System.out.println(x);
+        System.out.println("a and x are all changed, a: " + a);
+        System.out.println("a and x are all changed, x: " + x);
 
         // Bits
-        System.out.println("72 and H are stored as 01001000");
+        System.out.println("\n72 and H are stored as 01001000");
         char c = 'H';
         int d = c;
-        System.out.println(c);
-        System.out.println(d);
+        System.out.println("this is char of 01001000: " + c);
+        System.out.println("this is int of 01001000: " + d);
 
         // Instantiation of Arrays
         int[] li;
@@ -62,7 +62,7 @@ public class _03_Basics {
     public static void doStuff(Walrus w, int x) {
         w.weight = w.weight - 100;
         x = x - 5;
-    }
+    }  // The Golden Rule of Equals (GRoE)
 
     public static int doStuff2(Walrus w, int x) {
         w.weight = w.weight - 100;

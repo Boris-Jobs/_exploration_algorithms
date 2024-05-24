@@ -48,7 +48,6 @@ public class IntList {
          * this = p;
          * 这样的方法是错误的
          * */
-
     }
 
     /** The method we've written takes linear time, that is, if you have a list that is 1,000,000 items long, then getting the last item is going to take much longer than it would if we had a small list.*/
@@ -71,5 +70,4 @@ public class IntList {
         System.out.println(L2.first);
     }
 
-    
 }

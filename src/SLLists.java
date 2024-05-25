@@ -1,15 +1,13 @@
-import static java.lang.System.*;
-
 /**
  * Our Mission: Understand the Universe
  * Created by Boris Jobs (FrameX Inc.) on 2024/5/7 21:38.
  */
 
-public class SLList {
+public class SLLists {
 
     /* This is a nested class. */
     /** Declaring a nested class as static means that methods inside the static class can not access any of the members of the enclosing class. In this case, it means that no method in IntNode would be able to access first, addFirst, or getFirst.
-     * Put another way, if you examine the code here, you'll see that the IntNode class never uses the first variable of SLList, nor any of SLList's methods. As a result, we can use the static keyword, which means the IntNode class doesn't get a reference to its boss, saving us a small amount of memory.*/
+     * Put another way, if you examine the code here, you'll see that the IntNode class never uses the first variable of SLLists, nor any of SLLists's methods. As a result, we can use the static keyword, which means the IntNode class doesn't get a reference to its boss, saving us a small amount of memory.*/
 
     // Improvement #1: Rebranding
     // Improvement #4: Nested Classes
@@ -30,13 +28,13 @@ public class SLList {
     private int size;
 
 
-    public SLList(int x) {
+    public SLLists(int x) {
         first = new IntNode(x, null);
         size = 1;
     }  // 这是一个constructor
 
     // Improvement #6a: The Empty List
-    public SLList() {
+    public SLLists() {
         first = null;
         size = 0;
     }  // 这也是一个constructor
@@ -90,28 +88,28 @@ public class SLList {
 
 
     public static void main(String[] args) {
-        IntList L1 = new IntList(5, null);
-        SLList L2 = new SLList(5);
+        IntLists L1 = new IntLists(5, null);
+        SLLists L2 = new SLLists(5);
 
-        /* In SLList it would be: */
-        SLList L = new SLList(15);
+        /* In SLLists it would be: */
+        SLLists L = new SLLists(15);
         L.addFirst(10);
         L.addFirst(5);
         int x = L.getFirst();
 
-        /* In IntList it would be: */
-        IntList l = new IntList(15, null);
-        l = new IntList(10, l);
-        l = new IntList(5, l);
+        /* In IntLists it would be: */
+        IntLists l = new IntLists(15, null);
+        l = new IntLists(10, l);
+        l = new IntLists(5, l);
         int X = l.first;
 
-        SLList testL = new SLList(15);
+        SLLists testL = new SLLists(15);
         testL.addFirst(10);
         testL.first.next.next = testL.first.next;
         System.out.println(testL.first.next.next.item);
         System.out.println(L2.size());
         System.out.println(L2.size);  // 同一个class可以访问private变量，没毛病
-        SLList nullist = new SLList();
+        SLLists nullist = new SLLists();
         nullist.addLast(3);  // Cannot read field "next" because "p" is null
     }
 }

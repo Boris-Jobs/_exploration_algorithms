@@ -51,6 +51,7 @@ public class SLLists {
         // return this.first.item;
     }
 
+    /** We need to first find the second to last item, and then set its next pointer to be null. Adding a secondToLast pointer will not help either, because then we'd need to find the third to last item in the list in order to make sure that secondToLast and last obey the appropriate invariants after removing the last item. */
     public void addLast(int x) {
         size += 1;
 

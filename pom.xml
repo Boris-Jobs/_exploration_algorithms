@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Group ID: 你可以将其设定为你的组织或项目的标识符 -->
+    <groupId>com.github.boris-jobs</groupId>
+
+    <!-- Artifact ID: 通常是你的项目名称 -->
+    <artifactId>exploration-algorithms</artifactId>
+
+    <!-- Version: 设定为1.0-SNAPSHOT表示这是开发版本 -->
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.truth</groupId>
+            <artifactId>truth</artifactId>
+            <version>1.4.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- 你可以在这里添加其他依赖 -->
+    </dependencies>
+</project>

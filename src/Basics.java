@@ -9,7 +9,7 @@
  * While this might be fine in the short term, in the long term, doing problems without full understanding may doom you to failure later down the line.
  */
 
-public class _03_Basics {
+public class Basics {
     public static void main(String[] args) {
         System.out.println("\nHello world!");
 
